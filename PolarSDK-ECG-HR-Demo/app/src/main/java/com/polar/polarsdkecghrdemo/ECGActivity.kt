@@ -157,6 +157,7 @@ class ECGActivity : AppCompatActivity(), PlotterListener {
                         Log.d(TAG, "ecg update")
                         for (data in polarEcgData.samples) {
                             ecgPlotter.sendSingleSample((data.voltage.toFloat() / 1000.0).toFloat())
+                            DataStorage.saveECGData((data.voltage.toFloat() / 1000.0).toFloat())
                         }
                     },
                     { error: Throwable ->

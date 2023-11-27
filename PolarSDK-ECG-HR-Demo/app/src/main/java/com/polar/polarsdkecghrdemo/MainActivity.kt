@@ -47,11 +47,13 @@ class MainActivity : AppCompatActivity() {
         val setIdButton: Button = findViewById(R.id.buttonSetID)
         val ecgConnectButton: Button = findViewById(R.id.buttonConnectEcg)
         val hrConnectButton: Button = findViewById(R.id.buttonConnectHr)
+        val historyButton: Button = findViewById(R.id.buttonHistory)
         checkBT()
 
         setIdButton.setOnClickListener { onClickChangeID(it) }
         ecgConnectButton.setOnClickListener { onClickConnectEcg(it) }
         hrConnectButton.setOnClickListener { onClickConnectHr(it) }
+        historyButton.setOnClickListener { onClickHistory(it) }
     }
 
     private fun onClickConnectEcg(view: View) {
@@ -82,6 +84,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun onClickChangeID(view: View) {
         showDialog(view)
+    }
+
+    private fun onClickHistory(view: View) {
+        try {
+            val intent = Intent(this, HistoryActivity::class.java)
+            startActivity(intent)
+        } catch (e: Exception) {
+            Log.e("MainActivity", "Error starting HistoryActivity: ${e.message}")
+            e.printStackTrace()
+        }
     }
 
     private fun showDialog(view: View) {

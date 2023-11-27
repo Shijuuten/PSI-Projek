@@ -62,5 +62,11 @@
             android:label="@string/hr_name"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".HistoryActivity"
+            android:exported="false"
+            android:label="@string/History"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
     </application>
 </manifest>

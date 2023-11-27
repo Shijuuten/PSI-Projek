@@ -166,6 +166,7 @@ class HRActivity : AppCompatActivity(), PlotterListener {
                             }
                             textViewHR.text = sample.hr.toString()
                             plotter.addValues(sample)
+                            DataStorage.saveHRData(sample.hr)
 
                         }
                     },
