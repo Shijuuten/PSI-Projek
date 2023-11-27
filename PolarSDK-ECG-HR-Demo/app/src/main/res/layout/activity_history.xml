@@ -3,9 +3,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@color/colorBackground">
 
+    <TextView
+        android:id="@+id/textViewECGHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp"
+        android:text="ECG History:"
+        android:textSize="18sp"
+        android:textStyle="bold" />
     <TextView
         android:id="@+id/textHistory"
         android:layout_width="wrap_content"
@@ -15,20 +26,12 @@
         android:textSize="18sp"
         android:visibility="gone" />
 
-    <TextView
-        android:id="@+id/textViewECGHistory"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="ECG History:"
-        android:textStyle="bold"
-        android:layout_marginBottom="8dp"/>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewECG"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginTop="5dp" />
+
 
     <TextView
         android:id="@+id/textViewHRHistory"
@@ -37,11 +40,23 @@
         android:textSize="18sp"
         android:text="HR History:"
         android:textStyle="bold"
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/textHistory2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="History Kosong"
+        android:textSize="18sp"
+        android:visibility="gone" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewHR"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+
 
 </LinearLayout>
